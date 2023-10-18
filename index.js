@@ -1,15 +1,9 @@
+// [<https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide>]
+
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-
-const questions = [
-  "What is the title of the project",
-  "What is the description?",
-  "How does a user install your application?",
-  "How does a user use your application?",
-  "What are the contribution guidelines for your application?",
-  "What are the test instructions for your application?",
-];
+const { error } = require("console");
 
 // const questions = [
 //   ["input", "What is the title of the project", "title"],
@@ -27,15 +21,28 @@ const questions = [
 //     "instructions",
 //   ],
 // ];
-
-const questionGetter = (questions) => {
+const questions = [
+  "What is the title of the project",
+  "What is the description?",
+  "How does a user install your application?",
+  "How does a user use your application?",
+  "What are the contribution guidelines for your application?",
+  "What are the test instructions for your application?",
+];
+const questionGetter = (question, object) => {
   for (const question of questions) {
     `input: ${question[0]}`;
     console.log(question[0]);
   }
 };
 
-// console.log(...questions[0]);
+// const buildOutRM = (answers) => {
+//   fs.appendFile("./README.md", `# ${answers[0]}\n\n`),
+//     error ? console.log(error) : console.log(`success`);
+//   console.log(`I tried to build`);
+// };
+
+console.log(...questions);
 
 inquirer
   .prompt([
@@ -72,15 +79,7 @@ inquirer
   ])
   .then((answers) => {
     // Use user feedback for... whatever!!
-    const stringifyAnswers = JSON.stringify(answers);
-    fs.appendFile(
-      "./README.md",
-      `${stringifyAnswers}\n`,
-      //// Currently appends the object stringified (obviously)
-      (error) => {
-        error ? console.error(error) : console.log("Successfully Logged!");
-      }
-    );
+    writeToFile(answers);
   })
   .catch((error) => {
     if (error.isTtyError) {
@@ -92,9 +91,12 @@ inquirer
 // TODO: Create an array of questions for user input
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, answers) {
-  fs.writeFile("README.md", "utf8", (error) =>
-    error ? console.error(error) : console.log("Successfully Created!")
+function writeToFile(answers) {
+  fs.writeFile(
+    "README.md",
+    `# ${answers.title}\n\n## Description\n\n${answers.description}\n\n## Installation\n\n${answers.install}\n\n## Usage\n\n${answers.usage}\n\n## `,
+    (error) =>
+      error ? console.error(error) : console.log("Successfully Created!")
   );
 }
 
