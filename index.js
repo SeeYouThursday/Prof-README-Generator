@@ -3,7 +3,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { error } = require("console");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // const questions = [
 //   ["input", "What is the title of the project", "title"],
@@ -29,6 +29,9 @@ const questions = [
   "What are the contribution guidelines for your application?",
   "What are the test instructions for your application?",
 ];
+
+// const answers = "";
+
 const questionGetter = (question, object) => {
   for (const question of questions) {
     `input: ${question[0]}`;
@@ -42,44 +45,91 @@ const questionGetter = (question, object) => {
 //   console.log(`I tried to build`);
 // };
 
-console.log(...questions);
+console.log(questions);
+
+const [title, description, install, usage, contribute, test] = questions;
 
 inquirer
   .prompt([
     {
       type: "input",
-      message: questions[0],
+      message: title,
       name: "title",
     },
     {
       type: "input",
-      message: questions[1],
+      message: description,
       name: "description",
     },
     {
       type: "input",
-      message: questions[2],
+      message: install,
       name: "install",
     },
     {
       type: "input",
-      message: questions[3],
+      message: usage,
       name: "usage",
     },
     {
       type: "input",
-      message: questions[4],
+      message: contribute,
       name: "contribution",
     },
     {
       type: "input",
-      message: questions[5],
+      message: test,
       name: "test-instructions",
+    },
+    {
+      type: "list",
+      message: "Test",
+      name: "license",
+      choices: [
+        "AFL-3.0",
+        "Apache-2.0",
+        "Artistic-2.0",
+        "BSL-1.0",
+        "BSD-2-Clause",
+        "BSD-3-Clause",
+        "BSD-3-Clause-Clear",
+        "BSD-4-Clause",
+        "0BSD",
+        "CC",
+        "CC0-1.0",
+        "CC-BY-4.0",
+        "CC-BY-SA-4.0",
+        "WTFPL",
+        "ECL-2.0",
+        "EPL-1.0",
+        "EPL-2.0",
+        "EUPL-1.1",
+        "AGPL-3.0",
+        "GPL",
+        "GPL-2.0",
+        "GPL-3.0",
+        "LGPL",
+        "LGPL-2.1",
+        "LGPL-3.0",
+        "ISC",
+        "LPPL-1.3c",
+        "MS-PL",
+        "MIT",
+        "MPL-2.0",
+        "OSL-3.0",
+        "PostgreSQL",
+        "OFL-1.1",
+        "NCSA",
+        "Unlicense",
+        "Zlib",
+      ], ////Need License Types here!!!
     },
   ])
   .then((answers) => {
     // Use user feedback for... whatever!!
     writeToFile(answers);
+    generateMarkdown(answers);
+    console.log(title);
   })
   .catch((error) => {
     if (error.isTtyError) {
@@ -94,14 +144,16 @@ inquirer
 function writeToFile(answers) {
   fs.writeFile(
     "README.md",
-    `# ${answers.title}\n\n## Description\n\n${answers.description}\n\n## Installation\n\n${answers.install}\n\n## Usage\n\n${answers.usage}\n\n## `,
+    `# ${answers.title}\n\n## Description\n\n${answers.description}\n\n## Table of Contents\n\n## Installation\n\n${answers.install}\n\n## Usage\n\n${answers.usage}\n\n## Contributing\n\n## Tests\n\n## Questions\n\n${questions}\n`,
     (error) =>
       error ? console.error(error) : console.log("Successfully Created!")
   );
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inquirer.prompt;
+}
 
 // Function call to initialize app
 init();
