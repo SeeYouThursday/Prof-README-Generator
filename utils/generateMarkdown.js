@@ -1,32 +1,28 @@
-const { error } = require("console");
 const fs = require("fs");
 
-// TODO: Create a function that returns a license badge based on which license is passed in
+////Render License Badge towards to the top
 // If there is no license, return an empty string
 const renderLicenseBadge = (license) =>
   license
     ? `![Static Badge](https://img.shields.io/badge/${license}-content)`
     : "";
-// {renderLicenseLink(
-//         data.license
-//       )}
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  license ? `(# License)` : console.error(error);
-}
 
-// TODO: Create a function that returns the license section of README
+////Render License Link
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
+const renderLicenseLink = (license) => (license ? `[License](#license)` : "");
+
+////Render License Section of README
+// If there is no license, return an empty string
+const renderLicenseSection = (license) =>
   license
     ? `## License
-    ${license}
-    `
+
+    **This application is covered under the ${license} License**`
     : "";
-}
+// Below would be more helpful to include rather than an empty string.
 // If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-// TODO: Create a function to generate markdown for README
+
+//// Generate markdown for README
 const generateMarkdown = (data) =>
   `# ${data.title}
   
@@ -38,10 +34,11 @@ ${data.description}
   
 ## Table of Contents
 
-[Installation](#Installation)
-[Usage](#Usage)
-[Contributing](#Contributing)
-[Tests](#Tests)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- ${renderLicenseLink(data.license)}
 
 ## Installation
   
@@ -51,17 +48,17 @@ ${data.install}
   
 ${data.usage}
   
-${renderLicenseSection(data.license)}
-  
 ## Contributing
   
-## Tests
-  
-  `;
+//add link to contribute
 
-module.exports = {
-  generateMarkdown,
-  renderLicenseLink,
-  renderLicenseSection,
-  renderLicenseBadge,
-};
+## Tests
+
+//add link to tests
+
+//Renders License Section if a license is chosen in the prompts below
+
+${renderLicenseSection(data.license)}
+`;
+
+module.exports = { generateMarkdown };
