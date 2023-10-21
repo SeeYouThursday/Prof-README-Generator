@@ -1,11 +1,11 @@
-# sdafsdaffsd
-  
-![Static Badge](https://img.shields.io/badge/AFL-3.0-content)
+# asdklfj;
+
+![Static Badge](https://img.shields.io/badge/none-content)
 
 ## Description
-  
-sddfsdfasfd
-  
+
+adsfk;lj;laksfd
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -15,15 +15,15 @@ sddfsdfasfd
 - [License](#license)
 
 ## Installation
-  
-sdfdsfsfd
-  
+
+sdafl;kjdsfak;
+
 ## Usage
-  
-dfsadfsdfs
-  
+
+dsafl;kj;dfjs
+
 ## Contributing
-  
+
 //add link to contribute
 
 ## Tests
@@ -31,7 +31,3 @@ dfsadfsdfs
 //add link to tests
 
 //Renders License Section if a license is chosen in the prompts below
-
-## License
-
-    **This application is covered under the AFL-3.0 License**

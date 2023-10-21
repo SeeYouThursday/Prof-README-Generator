@@ -14,12 +14,12 @@ const renderLicenseLink = (license) => (license ? `[License](#license)` : "");
 ////Render License Section of README
 // If there is no license, return an empty string
 const renderLicenseSection = (license) =>
-  license
+  license !== "none"
     ? `## License
 
     **This application is covered under the ${license} License**`
     : "";
-// Below would be more helpful to include rather than an empty string.
+// Above would be more helpful to include rather than an empty string.
 // If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
 
 //// Generate markdown for README

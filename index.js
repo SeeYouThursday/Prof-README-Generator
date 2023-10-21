@@ -59,6 +59,7 @@ const questions = [
     message: "Select the License for your application:",
     name: "license",
     choices: [
+      "none",
       "AFL-3.0",
       "Apache-2.0",
       "Artistic-2.0",
