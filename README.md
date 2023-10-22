@@ -1,10 +1,10 @@
-# sdafasdf
+# sdafjlkhjhksdfla
   
-![Static Badge](https://img.shields.io/badge/BSL-1.0-content)
+![Static Badge](https://img.shields.io/badge/AFL-3.0-content)
 
 ## Description
   
-sadfsdfa
+sdfjkhjhdlskffsd
   
 ## Table of Contents
 
@@ -13,25 +13,29 @@ sadfsdfa
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [License](#license)
+- [Questions](#questions)
 
 ## Installation
   
-sdfsfds
+sdfasdafasdf
   
 ## Usage
   
-fsdfdssdf
+sdafsdafsdf
   
 ## Contributing
-  
-//add link to contribute
 
 ## Tests
-
-//add link to tests
 
 //Renders License Section if a license is chosen in the prompts below
 
 ## License
 
-    **This application is covered under the BSL-1.0 License**
+    **This application is covered under the AFL-3.0 License**
+
+
+## Questions
+[![GitHub Badge](https://img.shields.io/badge/SeeYouThursday-content?logo=github)](https://github.com//SeeYouThursday)
+
+How to contact me with questions:
+galyenb@vcu.edu

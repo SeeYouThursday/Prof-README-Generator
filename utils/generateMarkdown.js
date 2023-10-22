@@ -50,12 +50,8 @@ ${data.install}
 ${data.usage}
   
 ## Contributing
-  
-//add link to contribute
 
 ## Tests
-
-//add link to tests
 
 //Renders License Section if a license is chosen in the prompts below
 
@@ -63,9 +59,11 @@ ${renderLicenseSection(data.license)}
 
 
 ## Questions
+[![GitHub Badge](https://img.shields.io/badge/${
+    data.github
+  }-content?logo=github)](https://github.com//${data.github})
 
 How to contact me with questions:
-${data.github}
 ${data.email}`; // need the following: Github Name/Link, Email Prompt, Instructions on how to reach me with additional questions
 
 module.exports = { generateMarkdown };
