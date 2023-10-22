@@ -14,7 +14,7 @@ const renderLicenseLink = (license) => (license ? `[License](#license)` : "");
 ////Render License Section of README
 // If there is no license, return an empty string
 const renderLicenseSection = (license) =>
-  license !== "none"
+  license
     ? `## License
 
     **This application is covered under the ${license} License**`
@@ -39,6 +39,7 @@ ${data.description}
 - [Contributing](#contributing)
 - [Tests](#tests)
 - ${renderLicenseLink(data.license)}
+- [Questions](#questions)
 
 ## Installation
   
@@ -59,6 +60,12 @@ ${data.usage}
 //Renders License Section if a license is chosen in the prompts below
 
 ${renderLicenseSection(data.license)}
-`;
+
+
+## Questions
+
+How to contact me with questions:
+${data.github}
+${data.email}`; // need the following: Github Name/Link, Email Prompt, Instructions on how to reach me with additional questions
 
 module.exports = { generateMarkdown };

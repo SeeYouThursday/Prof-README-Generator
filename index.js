@@ -103,6 +103,11 @@ const questions = [
     name: "github",
     message: "Enter your GitHub Username",
   },
+  {
+    type: "email",
+    name: "email",
+    message: "Enter your email adress:",
+  },
 ];
 
 // TODO: Create a function to initialize app
