@@ -1,10 +1,10 @@
-# sdafjlkhjhksdfla
+# hjgkhkgjhkgj
   
-![Static Badge](https://img.shields.io/badge/AFL-3.0-content)
+![Static Badge](https://img.shields.io/badge/none-content)
 
 ## Description
   
-sdfjkhjhdlskffsd
+hjgkhjggk
   
 ## Table of Contents
 
@@ -17,25 +17,23 @@ sdfjkhjhdlskffsd
 
 ## Installation
   
-sdfasdafasdf
+hjgkghjk
   
 ## Usage
   
-sdafsdafsdf
+khjghgjk
   
 ## Contributing
 
 ## Tests
 
-//Renders License Section if a license is chosen in the prompts below
-
 ## License
 
-    **This application is covered under the AFL-3.0 License**
-
+    **This application is covered under the none License**
 
 ## Questions
-[![GitHub Badge](https://img.shields.io/badge/SeeYouThursday-content?logo=github)](https://github.com//SeeYouThursday)
+
+[![GitHub Badge](https://img.shields.io/badge/hjkggkjh-content?logo=github)](https://github.com//hjkggkjh)
 
 How to contact me with questions:
-galyenb@vcu.edu
+jkygghjk

@@ -19,7 +19,7 @@ const renderLicenseSection = (license) =>
 
     **This application is covered under the ${license} License**`
     : "";
-// Above would be more helpful to include rather than an empty string.
+
 // If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
 
 //// Generate markdown for README
@@ -53,17 +53,16 @@ ${data.usage}
 
 ## Tests
 
-//Renders License Section if a license is chosen in the prompts below
-
 ${renderLicenseSection(data.license)}
 
-
 ## Questions
+
 [![GitHub Badge](https://img.shields.io/badge/${
     data.github
   }-content?logo=github)](https://github.com//${data.github})
 
 How to contact me with questions:
-${data.email}`; // need the following: Github Name/Link, Email Prompt, Instructions on how to reach me with additional questions
+${data.email}
+`;
 
 module.exports = { generateMarkdown };
