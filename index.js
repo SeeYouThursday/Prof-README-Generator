@@ -1,19 +1,9 @@
-// [<https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide>]
-
-// TODO: Include packages needed for this application
+//packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// function appendFile(path, data, error) {
-//   fs.appendFile(path, data, (error) =>
-//     error ? console.error(error) : console.log("Successfully Created!")
-//   );
-// }
-
-// TODO: Create an array of questions for user input
-
-// TODO: Create a function to write README file
+//function to write README file
 function writeToFile(response) {
   fs.writeFile(
     "README.md",
@@ -23,6 +13,7 @@ function writeToFile(response) {
   );
 }
 
+//array of questions for user input
 const questions = [
   {
     type: "input",
@@ -52,14 +43,14 @@ const questions = [
   {
     type: "input",
     message: "What are the test instructions for your application?",
-    name: "test-instructions",
+    name: "tests",
   },
   {
     type: "list",
     message: "Select the License for your application:",
     name: "license",
     choices: [
-      "none",
+      "None",
       "AFL-3.0",
       "Apache-2.0",
       "Artistic-2.0",
@@ -110,8 +101,7 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to initialize app
-
+//Function to initialize app
 function init() {
   inquirer
     .prompt(questions)

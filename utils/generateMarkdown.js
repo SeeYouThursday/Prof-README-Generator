@@ -3,30 +3,27 @@ const fs = require("fs");
 ////Render License Badge towards to the top
 // If there is no license, return an empty string
 const renderLicenseBadge = (license) =>
-  license
-    ? `![Static Badge](https://img.shields.io/badge/${license}-content)`
+  license !== "None"
+    ? `\n\n![Static Badge](https://img.shields.io/badge/${license}-content)`
     : "";
 
 ////Render License Link
 // If there is no license, return an empty string
-const renderLicenseLink = (license) => (license ? `[License](#license)` : "");
+const renderLicenseLink = (license) =>
+  license !== "None" ? `\n- [License](#license)` : "";
 
 ////Render License Section of README
 // If there is no license, return an empty string
 const renderLicenseSection = (license) =>
-  license
-    ? `## License
-
-    **This application is covered under the ${license} License**`
+  license !== "None"
+    ? `\n\n## License\n\n**Note: This application is covered under the ${license} License.**`
     : "";
 
 // If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
 
 //// Generate markdown for README
 const generateMarkdown = (data) =>
-  `# ${data.title}
-  
-${renderLicenseBadge(data.license)}
+  `# ${data.title}${renderLicenseBadge(data.license)}
 
 ## Description
   
@@ -37,8 +34,7 @@ ${data.description}
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Tests](#tests)
-- ${renderLicenseLink(data.license)}
+- [Tests](#tests)${renderLicenseLink(data.license)}
 - [Questions](#questions)
 
 ## Installation
@@ -53,7 +49,7 @@ ${data.usage}
 
 ## Tests
 
-${renderLicenseSection(data.license)}
+${data.tests}${renderLicenseSection(data.license)}
 
 ## Questions
 
@@ -62,7 +58,7 @@ ${renderLicenseSection(data.license)}
   }-content?logo=github)](https://github.com//${data.github})
 
 How to contact me with questions:
-${data.email}
+[${data.email}](${data.email})
 `;
 
 module.exports = { generateMarkdown };

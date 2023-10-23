@@ -1,10 +1,10 @@
-# hjgkhkgjhkgj
-  
-![Static Badge](https://img.shields.io/badge/none-content)
+# asdhjfkljhklfdsa
+
+![Static Badge](https://img.shields.io/badge/0BSD-content)
 
 ## Description
   
-hjgkhjggk
+fsadkjfdsjhkl
   
 ## Table of Contents
 
@@ -17,23 +17,25 @@ hjgkhjggk
 
 ## Installation
   
-hjgkghjk
+sdfsdfafdskjlh
   
 ## Usage
   
-khjghgjk
+sdfajhlfdshj
   
 ## Contributing
 
 ## Tests
 
+sdfjaklhhjldfs
+
 ## License
 
-    **This application is covered under the none License**
+**Note: This application is covered under the 0BSD License.**
 
 ## Questions
 
-[![GitHub Badge](https://img.shields.io/badge/hjkggkjh-content?logo=github)](https://github.com//hjkggkjh)
+[![GitHub Badge](https://img.shields.io/badge/SeeYouThursday-content?logo=github)](https://github.com//SeeYouThursday)
 
 How to contact me with questions:
-jkygghjk
+[galyenb@vcu.edu](galyenb@vcu.edu)
