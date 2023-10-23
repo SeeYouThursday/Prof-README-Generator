@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { fileURLToPath } = require("url");
 
 ////Render License Badge towards to the top
 // If there is no license, return an empty string
@@ -20,6 +21,12 @@ const renderLicenseSection = (license) =>
     : "";
 
 // If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+
+////Render Usage Screenshot/Gif
+const screenshot = (filePath, altText) =>
+  filePath
+    ? `\n![#${altText}](${filePath})`
+    : console.log("no screenshot provided");
 
 //// Generate markdown for README
 const generateMarkdown = (data) =>
@@ -43,9 +50,11 @@ ${data.install}
   
 ## Usage
   
-${data.usage}
+${data.usage}${screenshot(data.img, data.altText)}
   
 ## Contributing
+
+${data.contribution}
 
 ## Tests
 
