@@ -125,6 +125,7 @@ const questions = [
   {
     type: "input",
     name: "video",
+    when: (answers) => answers.videoConfirm,
     message: "Enter your Video Url Here",
   },
 ];
