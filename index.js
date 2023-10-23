@@ -13,24 +13,7 @@ function writeToFile(response) {
   );
 }
 
-class Confirm {
-  constructor(message, name) {
-    this.message = message;
-    this.name = name;
-    ("input: confirm,");
-  }
-}
-
-const imgConfirm = new Confirm(
-  "Do you want to include a image or gif?",
-  "includeImage"
-);
-
-const vidConfirm = new Confirm(
-  "Do you want to add a video link to Usage?",
-  "videoUrl"
-);
-
+//
 //array of questions for user input
 const questions = [
   {
@@ -69,6 +52,7 @@ const questions = [
     name: "license",
     choices: [
       "None",
+      "MIT",
       "AFL-3.0",
       "Apache-2.0",
       "Artistic-2.0",
@@ -97,7 +81,6 @@ const questions = [
       "ISC",
       "LPPL-1.3c",
       "MS-PL",
-      "MIT",
       "MPL-2.0",
       "OSL-3.0",
       "PostgreSQL",
@@ -117,7 +100,11 @@ const questions = [
     name: "email",
     message: "Enter your email adress:",
   },
-  imgConfirm,
+  {
+    type: "confirm",
+    name: "includeImage",
+    message: "Do you want to include a image or gif?",
+  },
   {
     type: "input",
     name: "img",
@@ -130,7 +117,16 @@ const questions = [
     when: (answers) => answers.includeImage,
     message: "Enter the alt text for your img/gif",
   },
-  vidConfirm,
+  {
+    type: "confirm",
+    name: "videoConfirm",
+    message: "Do you want to add a video link to Usage?",
+  },
+  {
+    type: "input",
+    name: "video",
+    message: "Enter your Video Url Here",
+  },
 ];
 
 //Function to initialize app

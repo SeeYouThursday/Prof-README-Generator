@@ -1,8 +1,10 @@
-# dsfsdf
+# Title Test
+
+![Static Badge](https://img.shields.io/badge/MIT-content)
 
 ## Description
   
-fdsadfsdfs
+Description Test
   
 ## Table of Contents
 
@@ -10,29 +12,34 @@ fdsadfsdfs
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Tests](#tests)
+- [License](#license)
 - [Questions](#questions)
 
 ## Installation
   
-dsfdfsfds
+Install Test
   
 ## Usage
   
-dfsfsdsfd
-![#sdfgfgd](ffsdg)
-[Walkthrough Video](undefined)
+Usage Test
+![#testing app](/test)
+[Walkthrough Video](testlink)
   
 ## Contributing
 
-fdfs
+Contribute Test
 
 ## Tests
 
-dsfdfs
+Testing
+
+## License
+
+**Note: This application is covered under the MIT License.**
 
 ## Questions
 
-[![GitHub Badge](https://img.shields.io/badge/sadffd-content?logo=github)](https://github.com//sadffd)
+[![GitHub Badge](https://img.shields.io/badge/SeeYouThursday-content?logo=github)](https://github.com//SeeYouThursday)
 
 How to contact me with questions:
-[sdaffds](sdaffds)
+[galyenb@vcu.edu](galyenb@vcu.edu)
