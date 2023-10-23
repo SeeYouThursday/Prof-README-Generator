@@ -99,6 +99,24 @@ const questions = [
     name: "email",
     message: "Enter your email adress:",
   },
+  {
+    type: "confirm",
+    name: "includeImage",
+    message: "Do you want to include a image or gif?",
+    default: "true",
+  },
+  {
+    type: "input",
+    name: "img",
+    when: (answers) => answers.includeImage,
+    message: "Enter the file path to your img/gif",
+  },
+  {
+    type: "input",
+    name: "altText",
+    when: (answers) => answers.includeImage,
+    message: "Enter the alt text for your img/gif",
+  },
 ];
 
 //Function to initialize app
