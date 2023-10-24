@@ -13,7 +13,6 @@ function writeToFile(response) {
   );
 }
 
-//
 //array of questions for user input
 const questions = [
   {

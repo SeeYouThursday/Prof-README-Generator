@@ -43,7 +43,7 @@ Please follow the industry standard when considering forking this repository and
 
 ## Tests
 
-Type "node index.js" to begin to work through the various questions.
+N/A
 
 ## Questions
 
